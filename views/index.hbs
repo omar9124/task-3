@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h1>Weather App</h1>
+        </div>
+
+        <form id="Form" class="search-box">
+            <input type="text" id="Input" placeholder="Enter country name" required>
+            <button type="submit" id="submitBtn">Get Weather</button>
+        </form>
+
+        <div id="error" class="error-msg hidden"></div>
+
+        <div id="results" class="results hidden">
+            <div class="result-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="resCountry">Country: -</span>
+            </div>
+            <div class="result-item">
+                <i class="fa-solid fa-globe"></i>
+                <span id="resLat">Latitude: -</span>
+            </div>
+            <div class="result-item">
+                <i class="fa-solid fa-globe"></i>
+                <span id="resLon">Longitude: -</span>
+            </div>
+            <div class="result-item">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <span id="resTemp">Temperature: -</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="public/main.js"></script>
+</body>
+</html> 
