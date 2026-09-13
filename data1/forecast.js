@@ -6,7 +6,7 @@ const getWeather = (locationName, callback) => {
     request({ url, json: true }, (error, response) => {
         if (error) {
             callback("Network Error: Unable to connect to weather service.", undefined);
-        } else if (response.body.error) {
+        } else if (response.body && response.body.error) {
             callback(`Weather API Error: ${response.body.error.message}`, undefined);
         } else {
             callback(undefined, {
